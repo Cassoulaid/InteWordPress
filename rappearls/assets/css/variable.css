@@ -1,0 +1,24 @@
+:root {
+	/* Couleurs du label Rap'pearls (à adapter selon votre charte) */
+	--primary-color: #000000;
+	--secondary-color: #gold;
+	--text-color: #333333;
+	--background-color: #ffffff;
+	
+	/* Typographies */
+	--heading-font: 'Montserrat', sans-serif; /* À adapter selon votre charte */
+	--body-font: 'Open Sans', sans-serif;
+  }
+
+  /*
+Theme Name: Rap'pearls
+Theme URI: https://rappearls.com
+Author: Votre équipe
+Author URI: https://votresite.com
+Description: Thème personnalisé pour le label de rap Rap'pearls
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: rappearls
+*/
+

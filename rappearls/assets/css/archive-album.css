@@ -1,0 +1,221 @@
+/* Style général */
+.albums-archive {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: #2F2F2F; /* Texte principal en gris */
+}
+ 
+/* ==========================
+   🎤 TITRE DE LA PAGE
+   ========================== */
+.archive-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2F2F2F; /* Texte en gris */
+    position: relative;
+}
+ 
+.archive-title:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #6320EE; /* Bleu pour souligner */
+    margin: 1rem auto;
+}
+ 
+/* ==========================
+   🎵 DESCRIPTION DU GENRE (SI AFFICHÉ)
+   ========================== */
+.genre-description {
+    text-align: center;
+    background-color: #6320EE; /* Fond bleu */
+    color: #FFF;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+ 
+.genre-description h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #D4FE56; /* Vert fluo */
+}
+ 
+.genre-description p {
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+}
+ 
+/* ==========================
+   🎶 GRILLE D'ALBUMS
+   ========================== */
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+ 
+/* Carte d'album */
+.album-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #FFF;
+    border: 3px solid #D4FE56; /* Bordure verte */
+    text-align: center;
+}
+ 
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+ 
+.album-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+ 
+/* ==========================
+   🎤 COUVERTURE DE L'ALBUM
+   ========================== */
+.album-cover {
+    position: relative;
+    overflow: hidden;
+}
+ 
+.album-cover img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+ 
+.album-card:hover .album-cover img {
+    transform: scale(1.05);
+}
+ 
+/* ==========================
+   🎶 TITRE ET INFOS SUR L'ALBUM
+   ========================== */
+.album-title {
+    padding: 1.2rem;
+    margin: 0;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: color 0.3s ease;
+    color: #2F2F2F; /* Texte en gris */
+}
+ 
+.album-card:hover .album-title {
+    color: #F978AD; /* Rose */
+}
+ 
+/* Nom de l'artiste */
+.album-artist {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    text-align: center;
+    font-size: 1rem;
+    font-style: italic;
+    color: #6320EE; /* Bleu */
+}
+ 
+/* Genres de l'album */
+.album-genres {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #2F2F2F;
+    padding: 0.5rem;
+    border-top: 2px solid #6320EE; /* Bordure bleue */
+}
+ 
+/* ==========================
+   📌 PAGINATION
+   ========================== */
+.navigation.pagination {
+    text-align: center;
+    margin: 2rem 0;
+}
+ 
+.nav-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.page-numbers {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border: 1px solid #6320EE; /* Bleu */
+    border-radius: 4px;
+    text-decoration: none;
+    color: #2F2F2F;
+    transition: all 0.3s ease;
+}
+ 
+.page-numbers.current {
+    background-color: #D4FE56; /* Vert fluo */
+    color: #2F2F2F;
+    border-color: #D4FE56;
+}
+ 
+.page-numbers:hover:not(.current) {
+    background-color: rgba(99, 32, 238, 0.1); /* Bleu léger */
+}
+ 
+/* ==========================
+   📌 MESSAGE SI AUCUN ALBUM TROUVÉ
+   ========================== */
+.albums-archive > p {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+    background-color: #F978AD; /* Rose */
+    color: #2F2F2F;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+ 
+/* ==========================
+   📱 RESPONSIVE DESIGN
+   ========================== */
+@media screen and (max-width: 768px) {
+    .archive-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .albums-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+}
+ 
+@media screen and (max-width: 480px) {
+    .albums-archive {
+        padding: 1rem;
+    }
+    .archive-title {
+        font-size: 1.8rem;
+    }
+    .albums-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    .album-title {
+        font-size: 1.3rem;
+        padding: 0.8rem;
+    }
+    .album-artist {
+        font-size: 0.9rem;
+    }
+}

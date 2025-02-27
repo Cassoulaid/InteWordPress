@@ -1,0 +1,180 @@
+/* Style général */
+.artists-archive {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: "Poppins", sans-serif;
+    color: #2F2F2F; /* Texte principal en gris */
+}
+ 
+/* ==========================
+   🎤 TITRE DE LA PAGE
+   ========================== */
+.archive-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: #2F2F2F; /* Texte en gris */
+    position: relative;
+}
+ 
+.archive-title:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #6320EE; /* Bleu pour souligner */
+    margin: 1rem auto;
+}
+ 
+/* ==========================
+   🎶 GRILLE D'ARTISTES
+   ========================== */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+ 
+/* Carte d'artiste */
+.artist-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #FFF;
+    border: 3px solid #D4FE56; /* Bordure verte pour mettre en avant */
+}
+ 
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+ 
+.artist-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.artist-thumbnail {
+    position: relative;
+    overflow: hidden;
+}
+ 
+.artist-thumbnail img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+ 
+.artist-card:hover .artist-thumbnail img {
+    transform: scale(1.05);
+}
+ 
+/* Nom de l'artiste */
+.artist-name {
+    padding: 1.2rem;
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    transition: color 0.3s ease;
+    color: #2F2F2F; /* Texte en gris */
+}
+ 
+.artist-card:hover .artist-name {
+    color: #F978AD; /* Rose pour l'effet hover */
+}
+ 
+/* ==========================
+   📌 PAGINATION
+   ========================== */
+.navigation.pagination {
+    text-align: center;
+    margin: 2rem 0;
+}
+ 
+.nav-links {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.page-numbers {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border: 1px solid #6320EE; /* Bleu */
+    border-radius: 4px;
+    text-decoration: none;
+    color: #2F2F2F;
+    transition: all 0.3s ease;
+}
+ 
+.page-numbers.current {
+    background-color: #D4FE56; /* Vert fluo */
+    color: #2F2F2F;
+    border-color: #D4FE56;
+}
+ 
+.page-numbers:hover:not(.current) {
+    background-color: rgba(99, 32, 238, 0.1); /* Bleu léger */
+}
+ 
+.page-numbers.dots {
+    border: none;
+}
+ 
+.page-numbers.next,
+.page-numbers.prev {
+    font-weight: bold;
+}
+ 
+/* ==========================
+   📌 MESSAGE SI AUCUN ARTISTE TROUVÉ
+   ========================== */
+.artists-archive > p {
+    text-align: center;
+    font-size: 1.2rem;
+    padding: 2rem;
+    background-color: #F978AD; /* Rose */
+    color: #2F2F2F;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+ 
+/* ==========================
+   📱 RESPONSIVE DESIGN
+   ========================== */
+@media screen and (max-width: 768px) {
+    .archive-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    .artists-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+}
+ 
+@media screen and (max-width: 480px) {
+    .artists-archive {
+        padding: 1rem;
+    }
+    .archive-title {
+        font-size: 1.8rem;
+    }
+    .artists-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    .artist-name {
+        font-size: 1.1rem;
+        padding: 0.8rem;
+    }
+}
+

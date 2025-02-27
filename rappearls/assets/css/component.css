@@ -1,0 +1,146 @@
+/* Grille d'artistes */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .artist-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .artist-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .artist-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .artist-name {
+    padding: 1rem;
+    margin: 0;
+    font-family: var(--heading-font);
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  /* Grille d'albums */
+  .albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+  }
+  
+  .album-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .album-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .album-cover img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .album-title, .album-artist {
+    padding: 0 1rem;
+    margin: 0.5rem 0;
+    text-align: center;
+  }
+  
+  .album-genres {
+    font-size: 0.9rem;
+    padding: 0 1rem 1rem;
+    color: #666;
+    text-align: center;
+  }
+  
+  /* Page single artiste */
+  .artist-single {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .artist-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .artist-image {
+    max-width: 400px;
+    margin: 1rem 0;
+  }
+  
+  .artist-social ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+  }
+  
+  /* Page single album */
+  .album-single {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .album-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .album-cover {
+    max-width: 400px;
+    margin: 1rem 0;
+  }
+  
+  .album-details {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+  
+  .button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: var(--secondary-color);
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .artists-grid, .albums-grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+    
+    .artist-single, .album-single {
+      padding: 1rem;
+    }
+  }

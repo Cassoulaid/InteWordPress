@@ -1,0 +1,257 @@
+/* Style général */
+.content-area {
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: "Poppins", sans-serif;
+   
+}
+ 
+/* ==========================
+   🌟 SECTION HÉRO
+   ========================== */
+.hero-section {
+    position: relative;
+    background-color: #2F2F2F; /* Gris foncé */
+    background-image: linear-gradient(rgba(47, 47, 47, 0.8), rgba(47, 47, 47, 0.8)), url('assets/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #D4FE56; /* Texte en vert fluo */
+    padding: 6rem 2rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    border-radius: 8px;
+}
+ 
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+ 
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #F978AD; /* Rose */
+}
+ 
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: #D4FE56; /* Vert fluo */
+}
+ 
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+ 
+.button {
+    display: inline;
+    justify-content: center;
+    padding: 0.8rem 1.5rem;
+    background-color: #F978AD; /* Rose */
+    color: #2F2F2F; /* Texte gris foncé */
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 auto;
+}
+ 
+.button:hover {
+    background-color: #6320EE; /* Indigo */
+    color: #FFF;
+    transform: translateY(-2px);
+}
+ 
+.button-secondary {
+    background-color: transparent;
+    border: 2px solid #F978AD;
+    color: #F978AD;
+}
+ 
+.button-secondary:hover {
+    background-color: rgba(249, 120, 173, 0.1);
+}
+ 
+/* ==========================
+   🎤 SECTIONS CONTENU GÉNÉRAL
+   ========================== */
+section {
+    margin-bottom: 4rem;
+    padding: 0 1rem;
+}
+ 
+section h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    position: relative;
+    color: #2f2f2f; /* Vert fluo */
+    text-transform: uppercase;
+}
+ 
+section h2:after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #6320EE; /* Indigo */
+    margin: 1rem auto;
+}
+
+.section-action{
+    display: flex;
+    justify-content: center;
+}
+
+.prout {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+ 
+/* ==========================
+   🎶 GRILLE D'ARTISTES
+   ========================== */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+ 
+.artist-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #6320EE; /* Indigo */
+}
+ 
+.artist-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+ 
+.artist-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.artist-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+ 
+.artist-card h3 {
+    padding: 1.2rem;
+    margin: 0;
+    font-size: 1.3rem;
+    text-align: center;
+    color: #F978AD; /* Rose */
+}
+ 
+/* ==========================
+   🎵 GRILLE D'ALBUMS
+   ========================== */
+.albums-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+ 
+.album-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #6320EE; /* Indigo */
+}
+ 
+.album-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+ 
+.album-card a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+ 
+.album-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+ 
+.album-card h3 {
+    padding: 1rem 1rem 0.5rem;
+    margin: 0;
+    font-size: 1.1rem;
+    text-align: center;
+    color: white; /* Vert fluo */
+}
+ 
+.album-artist {
+    padding: 0 1rem 1rem;
+    margin: 0;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #F978AD; /* Rose */
+    font-style: italic;
+}
+ 
+/* ==========================
+   📱 RESPONSIVE DESIGN
+   ========================== */
+@media screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+    .artists-grid,
+    .albums-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1.5rem;
+    }
+    section h2 {
+        font-size: 1.8rem;
+    }
+}
+ 
+@media screen and (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-section {
+        padding: 4rem 1rem;
+    }
+    .artists-grid,
+    .albums-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+    .artist-card h3,
+    .album-card h3 {
+        font-size: 1rem;
+        padding: 0.8rem;
+    }
+    section {
+        margin-bottom: 2.5rem;
+    }
+}
